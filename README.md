@@ -60,3 +60,55 @@ Write a program in C++ to use map associative container. The keys will be the na
 and the values will be the populations of the states. When the program runs, the user is
 prompted to type the name of a state. The program then looks in the map, using the state
 name as an index and returns the population of the state.
+
+
+## CG
+
+### Question 1:
+
+![Question 1](https://myoctocat.com/assets/images/base-octocat.svg)
+
+### Question 2:
+
+Write C++ program to draw a concave polygon and fill it with desired color using scan fill
+algorithm. Apply the concept of inheritance.
+
+### Question 3:
+
+Write C++ program to implement Cohen Southerland line clipping algorithm.
+
+### Question 4:
+
+1.  Write C++ program to draw 2-D object and perform following basic transformations, Scaling
+b) Translation c) Rotation. Apply the concept of operator overloading.
+
+OR
+
+2. Write C++ program to implement translation, rotation and scaling transformations on
+equilateral triangle and rhombus. Apply the concept of operator overloading.
+
+### Question 5:
+
+Design and simulate any data structure like stack or queue visualization using graphics.
+Simulation should include all operations performed on designed data structure. Implement
+the same using OpenGL. 
+
+### Question 5:
+
+Write C++ program to generate snowflake using concept of fractals.
+
+### Question 6:
+
+Design and simulate any data structure like stack or queue visualization using graphics.
+Simulation should include all operations performed on designed data structure. Implement
+the same using OpenGL. 
+
+### Question 7:
+
+1. Write a C++ program to control a ball using arrow keys. Apply the concept of
+polymorphism.
+
+OR
+
+2. Write a C++ program to implement bouncing ball using sine wave form. Apply the concept
+of polymorphism. 
