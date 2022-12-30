@@ -1,49 +1,102 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
+class complex
+{
+public:
+    int real, img;
+
+    complex()
+    {
+        real = 0; img = 0;
+    }
+
+    complex operator +(complex b)
+    {
+        complex r;
+        r.real = real + b.real;
+        r.img = img + b.img;
+        return r;
+    }
+
+    complex operator -(complex b)
+    {
+        complex r;
+        r.real = real - b.real;
+        r.img = img - b.img;
+        return r;
+    }
+
+    complex operator *(complex b)
+    {
+        complex r;
+        r.real = (real * b.real) - (img * b.img);
+        r.img = (real * b.img) + (img * b.real);
+        return r;
+    }
+
+    friend ostream & operator << (ostream &os, const complex &z);
+    friend istream & operator >> (istream &is, complex &z);
+};
+
+ostream & operator << (ostream &os, const complex &z)
+{
+    os << "(" <<  z.real << ")" <<  "+i" << "(" <<  z.img << ")";
+    return os;
+}
+
+istream & operator >> (istream &is, complex &z)
+{
+    is >> z.real >> z.img;
+    return is;
+}
+
 int main()
 {
-	float a,b,c,d;
+    int option;
+    char cont;
+    complex z1, z2;
 
-	cout<<"Enter a and b: ";
-	cin>>a>>b;
-	cout<<endl;
+    cout << "Welcome to Complex Calculator!";
+    while(true){
+        cout <<    "\nOptions Menu : "
+             << "\n1 - Addition"
+             << "\n2 - Multiplication"
+             << "\n\nEnter your choice :";
+        cin >> option;
 
-	cout<<"Enter c and d: ";
-	cin>>c>>d;
-	cout<<endl;
+        switch(option){
+            case 1: //addition
 
-	cout<<"Complex Number 1: "<<a<<" + "<<b<<"i"<<endl;
-	cout<<"Complex Number 2: "<<c<<" + "<<d<<"i"<<endl;
+                cout << "\nEnter real and imaginary part of complex number z1 :\n";
+                cin >> z1;
+                cout << "\nEnter real and imaginary part of complex number z2 :\n";
+                cin >> z2;
+                cout << "Addition of complex numbers = ";
+                cout << z1+z2;
+                break;
 
-	int f;
+            case 2: //multiplication
 
-	do
-	{
+                cout << "\nEnter real and imaginary part of complex number z1 :\n";
+                cin >> z1;
+                cout << "\nEnter real and imaginary part of complex number z2 :\n";
+                cin >> z2;
+                cout << "Product of complex numbers = ";
+                cout << z1*z2;
+                break;
 
-		cout<<"Enter 1 for addition, 2 for subtraction, 3 for multiplication and 4 for division: ";
-		cin>>f;
+            default:
+                cout << "\nInvalid choice!" << endl;
+                break;
+        }
 
-		switch(f)
-		{
-			case 1: cout<<"Addition of 1 and 2: "<<a+c<<" + "<<b+d<<"i"<<endl;
-			break;
-
-			case 2: cout<<"Subtraction of 1 and 2: "<<a-c<<" + "<<b-d<<"i"<<endl;
-			break;
-
-			case 3: cout<<"Multiplication of 1 and 2: "<<(a*c)-(b*d)<<" + "<<(a*d)+(b*c)<<"i"<<endl;
-			break;
-
-			case 4: cout<<"Division of 1 and 2: "<<((a*c)+(b*d))/((c*c)+(d*d))<<" + "<<((b*c)-(d*a))/((c*c)+(d*d))<<"i"<<endl;
-			break;
-
-			case 5: cout<<"Exit"<<endl;
-			break;
-
-			default: cout<<"Wrong input!"<<endl;
-
-		}
+        cout << "\nDo you wish to continue? (y/n)\n";
+        cin >> cont;
+        if (cont == 'n' || cont == 'N'){
+            break;
+        }
     }
-	while(f!=5);
-	return 0;
+
+    return 0;
 }
