@@ -66,7 +66,7 @@ name as an index and returns the population of the state.
 
 ### Question 1:
 
-![Question 1](https://myoctocat.com/assets/images/base-octocat.svg)
+![Question 1](https://i.ibb.co/mHT0NHq/Screenshot-2022-12-30-at-3-57-11-PM.png)
 
 ### Question 2:
 
