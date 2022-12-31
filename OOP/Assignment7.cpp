@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : ass6.cpp
-// Author      : pict
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
 #include<bits/stdc++.h>
 #include<string>
