@@ -78,25 +78,6 @@ void MainWindow::dda(double x1,double y1,double x2,double y2,QRgb val)
     ui->label->setPixmap(QPixmap::fromImage(img));
 }
 
-int MainWindow::sign(int x)
-{
-
-    // Returns the sign of the number
-
-    if(x==0)
-    {
-        return 0;
-    }
-    if(x>0)
-    {
-        return 1;
-    }
-
-    return -1;
-}
-
-
-
 MainWindow::~MainWindow()
 {
     delete ui;
