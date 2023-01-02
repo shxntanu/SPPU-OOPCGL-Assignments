@@ -1,4 +1,4 @@
-# SPPU-OOPCGL-Assignments
+# SPPU OOPCGL Assignments
 
 Codes of the Assignments in the OOPCGL Lab Manual of SPPU Second Year Computer Engineering Syllabus.
 
